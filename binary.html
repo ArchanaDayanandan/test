@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+h2
+{
+  color: blue ;
+ text-align:center;
+}
+body
+{
+background-color:green;}
+br{color: white ;}
+</style>
+<script type="text/javascript">
+function binary(a,k)
+{
+
+document.writeln("<h2 ><center>"+"BINARY SEARCH"+"</center></h2><br>");
+document.writeln("<h5>"+"Elements are");
+for(i=0;i<a.length;i++)
+{
+document.writeln(a[i]);
+}
+
+for(i=0;i<a.length-1;i++)
+{
+for(j=i+1;j<a.length;j++)
+{
+if(a[i]>a[j])
+{
+t=a[i];a[i]=a[j];a[j]=t;
+}}}
+document.writeln("<br>"+"Sorted elements are");
+for(i=0;i<a.length;i++)
+{
+document.writeln(a[i]);
+}
+var low=0;
+var high=(a.length-1);
+var mid=Math.floor((low+high)/2);
+while(a[mid]!=k &&low<high)
+{
+if(k<a[mid])
+    high=mid-1;
+else
+    low=mid+1;
+mid=Math.floor((low+high)/2);
+}
+if(a[mid]==k)
+    document.writeln("<br>"+"Searched element found");
+else
+    document.writeln("<br>"+"Searched element not found"+"</h5>");
+}</script>
+<title>binary search</title>
+
+</head>
+<body style = "background-color:green" onload = "binary(a,k);">
+<script type="text/javascript">
+var n=parseInt(prompt("Enter array limit"));
+var a=new Array(n);
+var i,t,f=0;
+for(i=0;i<a.length;i++)
+{
+    a[i]=parseInt(prompt("Enter array element"));
+}
+var k=parseInt(prompt("Enter element to search"));
+
+</script>
+</body>
+</html>

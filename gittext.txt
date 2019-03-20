@@ -1,0 +1,121 @@
+mca@mca-HP-280-G2-MT:~$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.AndroidStudio3.2/
+	.AndroidStudio3.3/
+	.ICEauthority
+	.RData
+	.RapidMiner5/
+	.Rhistory
+	.Xauthority
+	.android/
+	.appletviewer
+	.bash_history
+	.bash_logout
+	.bashrc
+	.cache/
+	.cargo/
+	.compiz/
+	.config/
+	.dbus/
+	.dmrc
+	.emulator_console_auth_token
+	.gconf/
+	.gitconfig
+	.gnome/
+	.gnome2/
+	.gradle/
+	.gstreamer-0.10/
+	.idlerc/
+	.java/
+	.local/
+	.mozilla/
+	.multirust
+	.mysql_history
+	.nano_history
+	.nbi/
+	.netbeans/
+	.oracle_jre_usage/
+	.pki/
+	.profile
+	.python_history
+	.rstudio-desktop/
+	.rustup/
+	.scala_history
+	.scalaide/
+	.selected_editor
+	.ssh/
+	.subversion/
+	.swp
+	.thunderbird/
+	.viminfo
+	.wine/
+	.xsession-errors
+	.xsession-errors.old
+	Android/
+	AndroidStudioProjects/
+	AswathyKR/
+	Desktop/
+	Downloads/
+	IT_motives_2013.csv
+	Midhun/
+	NetBeansProjects/
+	OS/
+	Online Shopping PHP/
+	Pictures/
+	Prime.java
+	Rakhi/
+	VirtualBox VMs/
+	a.out
+	abc.txt
+	abcd/
+	achu.sh
+	android-studio-ide-181.5056338-linux(1).zip
+	android-studio/
+	archana/
+	archanadbms/
+	archanagit/
+	archanahtml/
+	arithmatic.c
+	arithmatic1.c
+	blogsite/
+	clab/
+	dee/
+	djenv/
+	dslab/
+	first.html~
+	flipflop.v~
+	hello.c
+	java/
+	jdk1.8.0_131/
+	largest.c
+	meghacp/
+	multi.v~
+	myfold.taz.gz
+	netbeans-8.2/
+	os assignment/
+	p1.txt
+	p2.txt
+	pascal/
+	python-course/
+	rapidminer/
+	sample.R
+	sample/
+	sparce.c
+	sparceadd.c
+	studentdb.java~
+	temperature.c
+	triangle.c
+	usercreate.txt
+	users.txt
+	workspace/
+	www/
+
+nothing added to commit but untracked files present (use "git add" to track)
+mca@mca-HP-280-G2-MT:~$ 
+

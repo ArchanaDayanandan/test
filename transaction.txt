@@ -1,0 +1,172 @@
+use trans;
+Database changed
+mysql> create table employee(e_no varchar(10) primary key, e_name varchar(20),age numeric(3,0));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into employee values('e01','jiffy',23);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee values('e02','megha',25);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee values('e03','midhun',29);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee values('e04','aswathi',30);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into employee values('e05','nita',33);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from employee;
++------+---------+------+
+| e_no | e_name  | age  |
++------+---------+------+
+| e01  | jiffy   |   23 |
+| e02  | megha   |   25 |
+| e03  | midhun  |   29 |
+| e04  | aswathi |   30 |
+| e05  | nita    |   33 |
++------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> select @@autocommit;
++--------------+
+| @@autocommit |
++--------------+
+|            1 |
++--------------+
+1 row in set (0.00 sec)
+
+ insert into employee values('e06','ramitha',34);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from employee;
++------+---------+------+
+| e_no | e_name  | age  |
++------+---------+------+
+| e01  | jiffy   |   23 |
+| e02  | megha   |   25 |
+| e03  | midhun  |   29 |
+| e04  | aswathi |   30 |
+| e05  | nita    |   33 |
+| e06  | ramitha |   34 |
++------+---------+------+
+6 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select * from employee;
++------+---------+------+
+| e_no | e_name  | age  |
++------+---------+------+
+| e01  | jiffy   |   23 |
+| e02  | megha   |   25 |
+| e03  | midhun  |   29 |
+| e04  | aswathi |   30 |
+| e05  | nita    |   33 |
++------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>  insert into employee values('e07','ramkumar',34);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into employee values('e08','remya',35);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from employee;
++------+----------+------+
+| e_no | e_name   | age  |
++------+----------+------+
+| e01  | jiffy    |   23 |
+| e02  | megha    |   25 |
+| e03  | midhun   |   29 |
+| e04  | aswathi  |   30 |
+| e05  | nita     |   33 |
+| e07  | ramkumar |   34 |
+| e08  | remya    |   35 |
++------+----------+------+
+7 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> start transcation;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'transcation' at line 1
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>  insert into employee values('e09','roshini',36);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into employee values('e10','shamna',37);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> savepoint xx;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from employee;
++------+----------+------+
+| e_no | e_name   | age  |
++------+----------+------+
+| e01  | jiffy    |   23 |
+| e02  | megha    |   25 |
+| e03  | midhun   |   29 |
+| e04  | aswathi  |   30 |
+| e05  | nita     |   33 |
+| e07  | ramkumar |   34 |
+| e08  | remya    |   35 |
+| e09  | roshini  |   36 |
+| e10  | shamna   |   37 |
++------+----------+------+
+9 rows in set (0.00 sec)
+
+mysql> delete from employee where e_no='e10';
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into employee values('e11','shithu',38);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from employee;
++------+----------+------+
+| e_no | e_name   | age  |
++------+----------+------+
+| e01  | jiffy    |   23 |
+| e02  | megha    |   25 |
+| e03  | midhun   |   29 |
+| e04  | aswathi  |   30 |
+| e05  | nita     |   33 |
+| e07  | ramkumar |   34 |
+| e08  | remya    |   35 |
+| e09  | roshini  |   36 |
+| e11  | shithu   |   38 |
++------+----------+------+
+9 rows in set (0.00 sec)
+
+mysql> rollback to xx;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from employee;
++------+----------+------+
+| e_no | e_name   | age  |
++------+----------+------+
+| e01  | jiffy    |   23 |
+| e02  | megha    |   25 |
+| e03  | midhun   |   29 |
+| e04  | aswathi  |   30 |
+| e05  | nita     |   33 |
+| e07  | ramkumar |   34 |
+| e08  | remya    |   35 |
+| e09  | roshini  |   36 |
+| e10  | shamna   |   37 |
++------+----------+------+
+9 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.03 sec)
+
+
